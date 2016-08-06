@@ -71,11 +71,11 @@
         this.storage.totalTimeFieldId = parseInt(this.setting('total_time_field_id'), 10);
         this.storage.timeFieldId = parseInt(this.setting('time_field_id'), 10);
       }
-      if (this.setting('hide_from_agents') && this.currentUser().role() !== 'admin') {
+      if (this.appShouldBeHidden()) {
         this.hide();
       }
     },
-
+	
     onAppActivated: function(app) {
       if (!app.firstLoad) {
         this.onAppFocusIn();
@@ -522,6 +522,14 @@
       addInsignificantZero: function(n) {
         return ( n < 10 ? '0' : '') + n;
       }
+    },
+    
+    appShouldBeHidden: function() {
+      if (this.setting('hide_from_agents') && 
+      	 (this.currentUser().role() !== 'admin' || this.setting('hide_from_admins'))) {
+        return true;
+      }
+      return false;
     }
   };
 }());

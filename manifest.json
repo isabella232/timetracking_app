@@ -34,6 +34,11 @@
       "default": false
     },
     {
+      "name": "hide_from_admins",
+      "type": "checkbox",
+      "default": false
+    },
+    {
       "name": "auto_pause_resume",
       "type": "checkbox",
       "default": true

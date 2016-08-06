@@ -46,6 +46,14 @@ parts:
       title: "This is the explanation helptext of the hide_from_agents checkbox for the admin who is installing the app. It is shown for the time tracking app (app to track time spent on tickets). Submission is the ticket submission (they cannot edit the time before submitting a ticket)."
       value: "The app will not be shown to agents who do not have the 'Admin' role. This also prevents them from being able to see & edit the time upon submission."
   - translation:
+      key: "txt.apps.time_tracking.app.parameters.hide_from_admins.label"
+      title: "This is a checkbox setting label. If the app is hidden from Agents and this this box is checked, it will also be hidden for Admins."
+      value: "Hide the app from admins"
+  - translation:
+      key: "txt.apps.time_tracking.app.parameters.hide_from_admins.helpText"
+      title: "This is the explanation helptext of the hide_from_admins checkbox for the admin who is installing the app. It is shown for the time tracking app (app to track time spent on tickets). Submission is the ticket submission (they cannot edit the time before submitting a ticket)."
+      value: "The app will not be shown to admin agents. This requires that the Hide From Agents checkbox is also set. This also prevents them from being able to see & edit the time upon submission."      
+  - translation:
       key: "txt.apps.time_tracking.app.parameters.manual_pause_resume.label"
       title: "This is an app setting allowing the admin to choose if he wants the timer controls allowing the agents to pause of reset the timer"
       value: "Display timer controls"
